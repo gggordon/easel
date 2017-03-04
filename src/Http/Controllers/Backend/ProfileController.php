@@ -17,7 +17,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $userData = Auth::user()->toArray();
+        $userData = $this->gaurd()->user()->toArray();
         $blogData = config('blog');
         $data = array_merge($userData, $blogData);
 
@@ -32,7 +32,7 @@ class ProfileController extends Controller
     public function editPrivacy()
     {
         return view('canvas::backend.profile.privacy', [
-            'data' => array_merge(Auth::user()->toArray(), config('blog')),
+            'data' => array_merge($this->gaurd()->user()->toArray(), config('blog')),
         ]);
     }
 

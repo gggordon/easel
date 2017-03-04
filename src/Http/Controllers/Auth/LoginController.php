@@ -100,15 +100,6 @@ class LoginController extends Controller
         ]);
     }
 
-    /**
-     * Get the guard to be used.
-     *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
-     */
-    protected function guard()
-    {
-        return Auth::guard('canvas');
-    }
 
     /**
      * During the login process, call the GitHub API and grab the latest

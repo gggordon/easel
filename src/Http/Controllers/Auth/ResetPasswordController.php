@@ -64,13 +64,4 @@ class ResetPasswordController extends Controller
         return Password::broker('canvas_users');
     }
 
-    /**
-     * Get the guard to be used during password reset.
-     *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
-     */
-    protected function guard()
-    {
-        return Auth::guard('canvas');
-    }
 }

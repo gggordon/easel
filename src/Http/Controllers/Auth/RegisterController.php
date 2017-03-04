@@ -71,13 +71,4 @@ class RegisterController extends Controller
         ]);
     }
 
-    /**
-     * Get the guard to be used.
-     *
-     * @return \Illuminate\Contracts\Auth\StatefulGuard
-     */
-    protected function guard()
-    {
-        return Auth::guard('canvas');
-    }
 }
