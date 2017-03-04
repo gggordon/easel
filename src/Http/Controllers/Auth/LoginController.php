@@ -2,7 +2,6 @@
 
 namespace Canvas\Http\Controllers\Auth;
 
-use Auth;
 use Session;
 use Validator;
 use Canvas\Models\User;
@@ -99,7 +98,6 @@ class LoginController extends Controller
             'password' => bcrypt($data['password']),
         ]);
     }
-
 
     /**
      * During the login process, call the GitHub API and grab the latest

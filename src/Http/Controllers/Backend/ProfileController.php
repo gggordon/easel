@@ -2,7 +2,6 @@
 
 namespace Canvas\Http\Controllers\Backend;
 
-use Auth;
 use Session;
 use Canvas\Models\User;
 use Canvas\Http\Controllers\Controller;
@@ -17,7 +16,7 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        $userData = $this->gaurd()->user()->toArray();
+        $userData = $this->guard()->user()->toArray();
         $blogData = config('blog');
         $data = array_merge($userData, $blogData);
 
@@ -32,7 +31,7 @@ class ProfileController extends Controller
     public function editPrivacy()
     {
         return view('canvas::backend.profile.privacy', [
-            'data' => array_merge($this->gaurd()->user()->toArray(), config('blog')),
+            'data' => array_merge($this->guard()->user()->toArray(), config('blog')),
         ]);
     }
 

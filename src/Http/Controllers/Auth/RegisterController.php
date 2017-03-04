@@ -2,7 +2,6 @@
 
 namespace Canvas\Http\Controllers\Auth;
 
-use Auth;
 use Validator;
 use Canvas\Models\User;
 use Canvas\Helpers\CanvasHelper;
